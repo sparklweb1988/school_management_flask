@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="mb-4">
+
+        <h2 class="fw-bold">
+            Dashboard
+        </h2>
+
+        <p class="text-muted">
+            Welcome, {{ current_user.username }}
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         MAIN TOTALS
+    ================================================== -->
+
+    <div class="row g-4">
+
+
+        <!-- STUDENTS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-primary-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-primary">
+                        Students
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_students }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEACHERS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-success-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-success">
+                        Teachers
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_teachers }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLASSROOMS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-warning-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-warning-emphasis">
+                        Classrooms
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_classrooms }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUBJECTS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-info-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-info-emphasis">
+                        Subjects
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_subjects }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         SECOND ROW
+    ================================================== -->
+
+    <div class="row g-4 mt-1">
+
+
+        <!-- SESSIONS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-secondary-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-secondary">
+                        Sessions
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_sessions }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TERMS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-danger-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-danger">
+                        Terms
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_terms }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEACHER ASSIGNMENTS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-primary-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-primary">
+                        Teacher Assignments
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_assignments }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-success-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-success">
+                        Results
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_results }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         INFORMATION
+    ================================================== -->
+
+    <div class="card shadow-sm border-0 mt-4">
+
+        <div class="card-body">
+
+            <h5 class="fw-bold">
+                School Result Management System
+            </h5>
+
+            <p class="text-muted mb-0">
+
+                Manage students, teachers, classrooms,
+                subjects, assignments and results from one place.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

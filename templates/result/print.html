@@ -1,0 +1,328 @@
+{% extends "base.html" %}
+
+{% block title %}
+Print Result
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+    <!-- PRINT BUTTON -->
+
+    <div class="d-flex justify-content-end mb-4 no-print">
+
+        <button
+            onclick="window.print()"
+            class="btn btn-primary"
+        >
+            Print Result
+        </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-xl-11">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body p-5">
+
+
+                    <!-- SCHOOL HEADER -->
+
+                    <div class="text-center mb-4">
+
+                        <h2 class="fw-bold mb-1">
+                            George College Of Technology
+                        </h2>
+
+                        <p class="text-muted mb-0">
+                            Student Academic Result
+                        </p>
+
+                    </div>
+
+
+                    <hr class="mb-4">
+
+
+                    <!-- STUDENT INFORMATION -->
+
+                    <div class="row justify-content-center mb-4">
+
+                        <div class="col-md-10">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <strong>
+                                        Student:
+                                    </strong>
+
+                                    {{ result.student.name }}
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <strong>
+                                        Class:
+                                    </strong>
+
+                                    {% if result.classroom %}
+
+                                        {{ result.classroom.name }}
+
+                                    {% else %}
+
+                                        -
+
+                                    {% endif %}
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <strong>
+                                        Session:
+                                    </strong>
+
+                                    {{ result.session.year }}
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <strong>
+                                        Term:
+                                    </strong>
+
+                                    {{ result.term.name }}
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESULT TABLE -->
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-hover align-middle w-100">
+
+                            <thead class="table-light">
+
+                                <tr>
+
+                                    <th class="py-3">
+                                        Subject
+                                    </th>
+
+                                    <th
+                                        class="text-center py-3"
+                                        style="width: 15%;"
+                                    >
+                                        CA
+                                    </th>
+
+                                    <th
+                                        class="text-center py-3"
+                                        style="width: 15%;"
+                                    >
+                                        Exam
+                                    </th>
+
+                                    <th
+                                        class="text-center py-3"
+                                        style="width: 15%;"
+                                    >
+                                        Total
+                                    </th>
+
+                                    <th
+                                        class="text-center py-3"
+                                        style="width: 15%;"
+                                    >
+                                        Grade
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td class="py-3">
+                                        {{ result.subject.name }}
+                                    </td>
+
+                                    <td class="text-center py-3">
+                                        {{ result.ca_score }}
+                                    </td>
+
+                                    <td class="text-center py-3">
+                                        {{ result.exam_score }}
+                                    </td>
+
+                                    <td class="text-center py-3 fw-bold">
+                                        {{ result.total_score }}
+                                    </td>
+
+                                    <td class="text-center py-3 fw-bold">
+
+                                        {% if result.total_score >= 70 %}
+                                            A
+                                        {% elif result.total_score >= 60 %}
+                                            B
+                                        {% elif result.total_score >= 50 %}
+                                            C
+                                        {% elif result.total_score >= 45 %}
+                                            D
+                                        {% elif result.total_score >= 40 %}
+                                            E
+                                        {% else %}
+                                            F
+                                        {% endif %}
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- SIGNATURES -->
+
+                    <div class="row justify-content-center mt-5">
+
+                        <div class="col-md-10">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+
+                                    <div class="border-top pt-2 mt-4">
+                                        Class Teacher
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="border-top pt-2 mt-4">
+                                        Principal
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<style>
+
+@media print {
+
+    /* Hide everything from base.html navigation */
+
+    .sidebar,
+    .navbar,
+    .topbar,
+    .header,
+    .navigation,
+    nav,
+    .no-print {
+        display: none !important;
+    }
+
+
+    /* Remove page spacing */
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+    }
+
+
+    .container-fluid {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+    .row {
+        margin: 0 !important;
+    }
+
+
+    .col-xl-11 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    .card-body {
+        padding: 20px !important;
+    }
+
+
+    /* Make the table use the page */
+
+    table {
+        width: 100% !important;
+    }
+
+
+    /* Remove links/buttons from printed page */
+
+    a {
+        text-decoration: none !important;
+    }
+
+}
+
+</style>
+
+{% endblock %}

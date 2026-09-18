@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Dashboard - School Result Management System
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="mb-4">
+
+    <h2 class="fw-bold">
+
+        Dashboard
+
+    </h2>
+
+    <p class="text-muted">
+
+        Welcome back,
+        {{ current_user.username }}
+
+    </p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+    <!-- STUDENTS -->
+
+    <div class="col-md-6 col-xl-4">
+
+        <div class="card dashboard-card shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Students
+                </h6>
+
+                <div class="card-number">
+
+                    {{ student_count }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    Registered students
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEACHERS -->
+
+    <div class="col-md-6 col-xl-4">
+
+        <div class="card dashboard-card shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Teachers
+                </h6>
+
+                <div class="card-number">
+
+                    {{ teacher_count }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    Registered teachers
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CLASSES -->
+
+    <div class="col-md-6 col-xl-4">
+
+        <div class="card dashboard-card shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Classes
+                </h6>
+
+                <div class="card-number">
+
+                    {{ classroom_count }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    School classes
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBJECTS -->
+
+    <div class="col-md-6 col-xl-4">
+
+        <div class="card dashboard-card shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Subjects
+                </h6>
+
+                <div class="card-number">
+
+                    {{ subject_count }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    School subjects
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ASSIGNMENTS -->
+
+    <div class="col-md-6 col-xl-4">
+
+        <div class="card dashboard-card shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Assignments
+                </h6>
+
+                <div class="card-number">
+
+                    {{ assignment_count }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    Teacher assignments
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULTS -->
+
+    <div class="col-md-6 col-xl-4">
+
+        <div class="card dashboard-card shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Results
+                </h6>
+
+                <div class="card-number">
+
+                    {{ result_count }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    Student results
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}

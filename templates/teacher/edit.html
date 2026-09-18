@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Teacher{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-sm">
+
+    <div class="card-body">
+
+        <h3 class="mb-4">
+            Edit Teacher
+        </h3>
+
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    value="{{ teacher.name }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Phone
+                </label>
+
+                <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    value="{{ teacher.phone or '' }}"
+                >
+
+            </div>
+
+
+            <button class="btn btn-primary">
+                Update Teacher
+            </button>
+
+            <a
+                href="{{ url_for('teacher.list_teachers') }}"
+                class="btn btn-secondary"
+            >
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

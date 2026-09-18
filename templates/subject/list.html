@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Subjects{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between mb-4">
+
+    <div>
+
+        <h2>Subjects</h2>
+
+        <p class="text-muted">
+            Manage school subjects
+        </p>
+
+    </div>
+
+
+    {% if current_user.role == "admin" %}
+
+    <a
+        href="{{ url_for('subject.create_subject') }}"
+        class="btn btn-primary"
+    >
+        Add Subject
+    </a>
+
+    {% endif %}
+
+</div>
+
+
+<div class="card shadow-sm">
+
+    <div class="card-body">
+
+        <table class="table table-hover">
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Subject</th>
+
+                    {% if current_user.role == "admin" %}
+                    <th>Action</th>
+                    {% endif %}
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for subject in subjects %}
+
+                <tr>
+
+                    <td>{{ loop.index }}</td>
+
+                    <td>{{ subject.name }}</td>
+
+
+                    {% if current_user.role == "admin" %}
+
+                    <td>
+
+                        <a
+                            href="{{ url_for(
+                                'subject.edit_subject',
+                                id=subject.id
+                            ) }}"
+                            class="btn btn-sm btn-warning"
+                        >
+                            Edit
+                        </a>
+
+
+                        <form
+                            method="POST"
+                            action="{{ url_for(
+                                'subject.delete_subject',
+                                id=subject.id
+                            ) }}"
+                            class="d-inline"
+                        >
+
+                            <button
+                                class="btn btn-sm btn-danger"
+                                onclick="return confirm('Delete this subject?')"
+                            >
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                    {% endif %}
+
+                </tr>
+
+                {% else %}
+
+                <tr>
+
+                    <td colspan="3" class="text-center">
+                        No subjects found.
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Class
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- HEADER -->
+
+    <div class="mb-4">
+
+        <h2 class="fw-bold mb-1">
+            My Class
+        </h2>
+
+        <p class="text-muted mb-0">
+            View your classroom, teachers and subjects.
+        </p>
+
+    </div>
+
+
+    {% if classroom %}
+
+    <!-- CLASS INFORMATION -->
+
+    <div class="card shadow-sm border-0 mb-4">
+
+        <div class="card-body">
+
+            <h4 class="fw-bold mb-3">
+                {{ classroom.name }}
+            </h4>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>
+                        Student:
+                    </strong>
+
+                    <div>
+                        {{ student.name }}
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 mb-3">
+
+                    <strong>
+                        Class:
+                    </strong>
+
+                    <div>
+                        {{ classroom.name }}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEACHERS AND SUBJECTS -->
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body">
+
+            <div class="mb-4">
+
+                <h5 class="fw-bold mb-1">
+                    Teachers and Subjects
+                </h5>
+
+                <p class="text-muted mb-0">
+                    Teachers assigned to your classroom.
+                </p>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Teacher
+                            </th>
+
+                            <th>
+                                Subject
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        {% for assignment in assignments %}
+
+                        <tr>
+
+                            <td>
+                                {{ loop.index }}
+                            </td>
+
+
+                            <td>
+
+                                <strong>
+                                    {{ assignment.teacher.name }}
+                                </strong>
+
+                            </td>
+
+
+                            <td>
+                                {{ assignment.subject.name }}
+                            </td>
+
+                        </tr>
+
+                        {% else %}
+
+                        <tr>
+
+                            <td
+                                colspan="3"
+                                class="text-center text-muted py-4"
+                            >
+
+                                No teachers or subjects have been
+                                assigned to your class yet.
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {% else %}
+
+    <!-- NO CLASS -->
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body text-center py-5">
+
+            <h4 class="fw-bold mb-2">
+                No Classroom Assigned
+            </h4>
+
+            <p class="text-muted mb-0">
+                You have not been assigned to a classroom yet.
+                Please contact the school administrator.
+            </p>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

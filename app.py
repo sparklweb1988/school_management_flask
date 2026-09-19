@@ -1,10 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from config import Config
 from extensions import db, login_manager
 
 from models import User
-
 
 
 def create_app():
@@ -18,6 +17,11 @@ def create_app():
 
     login_manager.login_view = "auth.login"
 
+
+    # -------------------------
+    # USER LOADER
+    # -------------------------
+
     @login_manager.user_loader
     def load_user(user_id):
 
@@ -25,6 +29,7 @@ def create_app():
             User,
             int(user_id)
         )
+
 
     # -------------------------
     # BLUEPRINTS
@@ -52,6 +57,7 @@ def create_app():
     app.register_blueprint(session)
     app.register_blueprint(term)
 
+
     # -------------------------
     # HOME
     # -------------------------
@@ -59,13 +65,14 @@ def create_app():
     @app.route("/")
     def home():
 
-        return """
-        <h1>School Result Management System</h1>
+        return render_template(
+            "home.html"
+        )
 
-        <p>
-            <a href="/auth/login">Login</a>
-        </p>
-        """
+
+    # -------------------------
+    # RETURN APP
+    # -------------------------
 
     return app
 

@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+
+{% block title %}
+Student Result
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+
+    <!-- PRINT BUTTON -->
+
+    <div class="d-flex justify-content-end mb-3 no-print">
+
+        <button
+            onclick="window.print()"
+            class="btn btn-primary"
+        >
+
+            Print Result
+
+        </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body p-4">
+
+
+            <!-- SCHOOL HEADER -->
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold mb-1">
+                    George College Of Technology
+                </h2>
+
+                <p class="mb-0 text-muted">
+                    Student Academic Result
+                </p>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- STUDENT INFORMATION -->
+
+            <div class="row mb-4 mt-4">
+
+                <div class="col-md-6 mb-2">
+
+                    <strong>
+                        Student:
+                    </strong>
+
+                    {{ student.name }}
+
+                </div>
+
+
+                <div class="col-md-6 mb-2">
+
+                    <strong>
+                        Class:
+                    </strong>
+
+                    {% if student.classroom %}
+
+                        {{ student.classroom.name }}
+
+                    {% else %}
+
+                        -
+
+                    {% endif %}
+
+                </div>
+
+
+                <div class="col-md-6 mb-2">
+
+                    <strong>
+                        Session:
+                    </strong>
+
+                    {{ session.year }}
+
+                </div>
+
+
+                <div class="col-md-6 mb-2">
+
+                    <strong>
+                        Term:
+                    </strong>
+
+                    {{ term.name }}
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULTS -->
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered align-middle">
+
+                    <thead class="table-light">
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Subject
+                            </th>
+
+                            <th class="text-center">
+                                CA
+                            </th>
+
+                            <th class="text-center">
+                                Exam
+                            </th>
+
+                            <th class="text-center">
+                                Total
+                            </th>
+
+                            <th class="text-center">
+                                Grade
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        {% for result in results %}
+
+                        <tr>
+
+                            <td>
+                                {{ loop.index }}
+                            </td>
+
+
+                            <td>
+                                {{ result.subject.name }}
+                            </td>
+
+
+                            <td class="text-center">
+                                {{ result.ca_score }}
+                            </td>
+
+
+                            <td class="text-center">
+                                {{ result.exam_score }}
+                            </td>
+
+
+                            <td class="text-center fw-bold">
+                                {{ result.total_score }}
+                            </td>
+
+
+                            <td class="text-center fw-bold">
+
+                                {% if result.total_score >= 70 %}
+                                    A
+                                {% elif result.total_score >= 60 %}
+                                    B
+                                {% elif result.total_score >= 50 %}
+                                    C
+                                {% elif result.total_score >= 45 %}
+                                    D
+                                {% elif result.total_score >= 40 %}
+                                    E
+                                {% else %}
+                                    F
+                                {% endif %}
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- SIGNATURES -->
+
+            <div class="row mt-5">
+
+                <div class="col-6">
+
+                    <div class="border-top pt-2">
+                        Class Teacher
+                    </div>
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <div class="border-top pt-2">
+                        Principal
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PRINT CSS
+========================================================= -->
+
+<style>
+
+@media print {
+
+    .sidebar,
+    .sidebar-overlay,
+    .topbar,
+    .hamburger,
+    .no-print,
+    footer {
+
+        display: none !important;
+
+    }
+
+
+    body {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        background: white !important;
+
+    }
+
+
+    .main-content {
+
+        margin: 0 !important;
+
+        width: 100% !important;
+
+    }
+
+
+    .page-wrapper {
+
+        display: block !important;
+
+        min-height: auto !important;
+
+    }
+
+
+    .content {
+
+        padding: 0 !important;
+
+    }
+
+
+    .container-fluid {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+    }
+
+
+    .card {
+
+        border: none !important;
+
+        box-shadow: none !important;
+
+    }
+
+
+    .card-body {
+
+        padding: 10px !important;
+
+    }
+
+
+    table {
+
+        width: 100% !important;
+
+        border-collapse: collapse !important;
+
+    }
+
+
+    th,
+    td {
+
+        border: 1px solid #000 !important;
+
+    }
+
+}
+
+</style>
+
+{% endblock %}

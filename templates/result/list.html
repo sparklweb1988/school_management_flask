@@ -9,6 +9,8 @@ Results
 
 <div class="d-flex justify-content-between align-items-center mb-4">
 
+    <!-- PAGE TITLE -->
+
     <div>
 
         <h2 class="fw-bold mb-1">
@@ -22,19 +24,48 @@ Results
     </div>
 
 
+    <!-- =====================================================
+         TOP ACTION BUTTONS
+    ====================================================== -->
+
     {% if current_user.role in ["admin", "teacher"] %}
 
-    <a
-        href="{{ url_for('result.create_result') }}"
-        class="btn btn-primary"
-    >
-        Enter Result
-    </a>
+    <div class="d-flex gap-2">
+
+        <!-- ENTER RESULT -->
+
+        <a
+            href="{{ url_for('result.create_result') }}"
+            class="btn btn-primary"
+        >
+
+            Enter Result
+
+        </a>
+
+
+        <!-- PRINT STUDENT RESULT -->
+
+        <a
+            href="{{ url_for('result.print_student_result') }}"
+            class="btn btn-dark"
+        >
+
+            Print Student Result
+
+        </a>
+
+    </div>
 
     {% endif %}
 
 </div>
 
+
+
+<!-- =========================================================
+     RESULTS TABLE
+========================================================= -->
 
 <div class="card shadow-sm border-0">
 
@@ -48,7 +79,9 @@ Results
 
                     <tr>
 
-                        <th>#</th>
+                        <th>
+                            #
+                        </th>
 
                         <th>
                             Student
@@ -108,14 +141,20 @@ Results
                     <tr>
 
 
-                        <!-- NUMBER -->
+                        <!-- =================================================
+                             NUMBER
+                        ================================================== -->
 
                         <td>
+
                             {{ loop.index }}
+
                         </td>
 
 
-                        <!-- STUDENT -->
+                        <!-- =================================================
+                             STUDENT
+                        ================================================== -->
 
                         <td>
 
@@ -126,49 +165,75 @@ Results
                         </td>
 
 
-                        <!-- SUBJECT -->
+                        <!-- =================================================
+                             SUBJECT
+                        ================================================== -->
 
                         <td>
+
                             {{ result.subject.name }}
+
                         </td>
 
 
-                        <!-- CLASS -->
+                        <!-- =================================================
+                             CLASS
+                        ================================================== -->
 
                         <td>
+
                             {{ result.classroom.name }}
+
                         </td>
 
 
-                        <!-- SESSION -->
+                        <!-- =================================================
+                             SESSION
+                        ================================================== -->
 
                         <td>
+
                             {{ result.session.year }}
+
                         </td>
 
 
-                        <!-- TERM -->
+                        <!-- =================================================
+                             TERM
+                        ================================================== -->
 
                         <td>
+
                             {{ result.term.name }}
+
                         </td>
 
 
-                        <!-- CA -->
+                        <!-- =================================================
+                             CA
+                        ================================================== -->
 
                         <td>
+
                             {{ result.ca_score }}
+
                         </td>
 
 
-                        <!-- EXAM -->
+                        <!-- =================================================
+                             EXAM
+                        ================================================== -->
 
                         <td>
+
                             {{ result.exam_score }}
+
                         </td>
 
 
-                        <!-- TOTAL -->
+                        <!-- =================================================
+                             TOTAL
+                        ================================================== -->
 
                         <td>
 
@@ -179,7 +244,9 @@ Results
                         </td>
 
 
-                        <!-- GRADE -->
+                        <!-- =================================================
+                             GRADE
+                        ================================================== -->
 
                         <td>
 
@@ -216,64 +283,76 @@ Results
                         </td>
 
 
-                        <!-- ACTIONS -->
+                        <!-- =================================================
+                             ACTIONS
+                        ================================================== -->
 
                         {% if current_user.role in ["admin", "teacher"] %}
 
                         <td>
 
-
-                            <!-- EDIT -->
-
-                            <a
-                                href="{{ url_for(
-                                    'result.edit_result',
-                                    id=result.id
-                                ) }}"
-                                class="btn btn-sm btn-warning"
-                            >
-                                Edit
-                            </a>
+                            <div class="d-flex gap-1 flex-wrap">
 
 
-                            <!-- PRINT -->
+                                <!-- EDIT -->
 
-                            <a
-                                href="{{ url_for(
-                                    'result.print_result',
-                                    id=result.id
-                                ) }}"
-                                class="btn btn-sm btn-dark"
-                            >
-                                Print
-                            </a>
-
-
-                            <!-- DELETE -->
-
-                            {% if current_user.role == "admin" %}
-
-                            <form
-                                method="POST"
-                                action="{{ url_for(
-                                    'result.delete_result',
-                                    id=result.id
-                                ) }}"
-                                class="d-inline"
-                            >
-
-                                <button
-                                    type="submit"
-                                    class="btn btn-sm btn-danger"
-                                    onclick="return confirm('Delete this result?')"
+                                <a
+                                    href="{{ url_for(
+                                        'result.edit_result',
+                                        id=result.id
+                                    ) }}"
+                                    class="btn btn-sm btn-warning"
                                 >
-                                    Delete
-                                </button>
 
-                            </form>
+                                    Edit
 
-                            {% endif %}
+                                </a>
 
+
+                                <!-- PRINT SINGLE RESULT -->
+
+                                <a
+                                    href="{{ url_for(
+                                        'result.print_result',
+                                        id=result.id
+                                    ) }}"
+                                    class="btn btn-sm btn-dark"
+                                >
+
+                                    Print
+
+                                </a>
+
+
+                                <!-- DELETE -->
+
+                                {% if current_user.role == "admin" %}
+
+                                <form
+                                    method="POST"
+                                    action="{{ url_for(
+                                        'result.delete_result',
+                                        id=result.id
+                                    ) }}"
+                                    class="d-inline"
+                                >
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Delete this result?')"
+                                    >
+
+                                        Delete
+
+                                    </button>
+
+                                </form>
+
+                                {% endif %}
+
+
+                            </div>
 
                         </td>
 
@@ -285,6 +364,10 @@ Results
 
                     {% else %}
 
+
+                    <!-- =================================================
+                         NO RESULTS
+                    ================================================== -->
 
                     <tr>
 

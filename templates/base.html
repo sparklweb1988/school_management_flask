@@ -73,9 +73,7 @@
     <div class="sidebar-header">
 
         <div class="brand">
-
             School Result
-
         </div>
 
 
@@ -274,9 +272,7 @@
             <div class="topbar-user">
 
                 <span>
-
                     {{ current_user.username }}
-
                 </span>
 
 
@@ -331,105 +327,35 @@
 
 
         <!-- =================================================
-             FOOTER
+             COMPACT FOOTER
         ================================================== -->
 
-        <footer class="footer no-print">
+        <footer class="no-print border-top bg-light mt-4 py-2">
+
+            <div
+                class="container-fluid d-flex justify-content-center align-items-center flex-wrap gap-2"
+            >
+
+                <small class="text-muted">
+
+                    &copy; {{ current_year }}
+                    George College Of Technology
+
+                </small>
 
 
-            <div class="footer-container">
-
-
-                <!-- FOOTER BRAND -->
-
-                <div class="footer-brand">
-
-                    <h5>
-                        George College Of Technology
-                    </h5>
-
-
-                    <p>
-                        School Result Management System
-                    </p>
-
-
-                    <span>
-
-                        A simple and efficient platform for managing
-                        students, teachers, classes, subjects and
-                        academic results.
-
-                    </span>
-
-                </div>
-
-
-                <!-- ACADEMIC MANAGEMENT -->
-
-                <div class="footer-info">
-
-                    <h6>
-                        Academic Management
-                    </h6>
-
-
-                    <p>
-
-                        Manage academic records, teacher assignments,
-                        student information and examination results
-                        from one secure platform.
-
-                    </p>
-
-                </div>
-
-
-                <!-- SYSTEM INFORMATION -->
-
-                <div class="footer-system">
-
-                    <h6>
-                        System Information
-                    </h6>
-
-
-                    <p>
-
-                        Designed to make school administration
-                        faster, easier and more organized.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- FOOTER BOTTOM -->
-
-            <div class="footer-bottom">
-
-
-                <span>
-
-                    © {{ current_year }}
-                    George College Of Technology.
-                    All rights reserved.
-
+                <span class="text-muted">
+                    •
                 </span>
 
 
-                <span>
+                <small class="text-muted">
 
                     School Result Management System
 
-                </span>
-
+                </small>
 
             </div>
-
 
         </footer>
 

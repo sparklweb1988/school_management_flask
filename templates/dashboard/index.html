@@ -44,6 +44,13 @@ Dashboard
                         {{ total_students }}
                     </h2>
 
+                    <a
+                        href="{{ url_for('student.list_students') }}"
+                        class="btn btn-sm btn-primary mt-2"
+                    >
+                        View Students
+                    </a>
+
                 </div>
 
             </div>
@@ -66,6 +73,13 @@ Dashboard
                     <h2 class="fw-bold">
                         {{ total_teachers }}
                     </h2>
+
+                    <a
+                        href="{{ url_for('teacher.list_teachers') }}"
+                        class="btn btn-sm btn-success mt-2"
+                    >
+                        View Teachers
+                    </a>
 
                 </div>
 
@@ -90,6 +104,13 @@ Dashboard
                         {{ total_classrooms }}
                     </h2>
 
+                    <a
+                        href="{{ url_for('classroom.list_classrooms') }}"
+                        class="btn btn-sm btn-warning mt-2"
+                    >
+                        View Classes
+                    </a>
+
                 </div>
 
             </div>
@@ -112,6 +133,13 @@ Dashboard
                     <h2 class="fw-bold">
                         {{ total_subjects }}
                     </h2>
+
+                    <a
+                        href="{{ url_for('subject.list_subjects') }}"
+                        class="btn btn-sm btn-info mt-2"
+                    >
+                        View Subjects
+                    </a>
 
                 </div>
 
@@ -146,6 +174,13 @@ Dashboard
                         {{ total_sessions }}
                     </h2>
 
+                    <a
+                        href="{{ url_for('session.list_sessions') }}"
+                        class="btn btn-sm btn-secondary mt-2"
+                    >
+                        View Sessions
+                    </a>
+
                 </div>
 
             </div>
@@ -168,6 +203,13 @@ Dashboard
                     <h2 class="fw-bold">
                         {{ total_terms }}
                     </h2>
+
+                    <a
+                        href="{{ url_for('term.list_terms') }}"
+                        class="btn btn-sm btn-danger mt-2"
+                    >
+                        View Terms
+                    </a>
 
                 </div>
 
@@ -192,6 +234,13 @@ Dashboard
                         {{ total_assignments }}
                     </h2>
 
+                    <a
+                        href="{{ url_for('assignment.list_assignments') }}"
+                        class="btn btn-sm btn-primary mt-2"
+                    >
+                        View Assignments
+                    </a>
+
                 </div>
 
             </div>
@@ -214,6 +263,43 @@ Dashboard
                     <h2 class="fw-bold">
                         {{ total_results }}
                     </h2>
+
+                    <a
+                        href="{{ url_for('result.list_results') }}"
+                        class="btn btn-sm btn-success mt-2"
+                    >
+                        View Results
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEE PAYMENTS -->
+
+        <div class="col-md-6 col-lg-3">
+
+            <div class="card shadow-sm border-0 bg-info-subtle">
+
+                <div class="card-body">
+
+                    <h6 class="text-info-emphasis">
+                        Fee Payments
+                    </h6>
+
+                    <h2 class="fw-bold">
+                        {{ total_fee_payments }}
+                    </h2>
+
+                    <a
+                        href="{{ url_for('payment.fee_payments') }}"
+                        class="btn btn-sm btn-info mt-2"
+                    >
+                        View Payments
+                    </a>
 
                 </div>
 
@@ -240,7 +326,8 @@ Dashboard
             <p class="text-muted mb-0">
 
                 Manage students, teachers, classrooms,
-                subjects, assignments and results from one place.
+                subjects, assignments, results and fee
+                payments from one place.
 
             </p>
 

@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block title %}
+Create School Fee
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- PAGE HEADER -->
+
+    <div class="mb-4">
+
+        <h2 class="fw-bold">
+            Create School Fee
+        </h2>
+
+        <p class="text-muted">
+            Create a school fee for a classroom, session and term.
+        </p>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <form method="POST">
+
+
+                <!-- CLASSROOM -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Classroom
+                    </label>
+
+                    <select
+                        name="classroom_id"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select Classroom
+                        </option>
+
+
+                        {% for classroom in classrooms %}
+
+                        <option value="{{ classroom.id }}">
+
+                            {{ classroom.name }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- SESSION -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        School Session
+                    </label>
+
+                    <select
+                        name="session_id"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select Session
+                        </option>
+
+
+                        {% for session in sessions %}
+
+                        <option value="{{ session.id }}">
+
+                            {{ session.year }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- TERM -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Term
+                    </label>
+
+                    <select
+                        name="term_id"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select Term
+                        </option>
+
+
+                        {% for term in terms %}
+
+                        <option value="{{ term.id }}">
+
+                            {{ term.name }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- AMOUNT -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Amount
+                    </label>
+
+                    <input
+                        type="number"
+                        name="amount"
+                        class="form-control"
+                        placeholder="Enter school fee amount"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Description
+                    </label>
+
+                    <textarea
+                        name="description"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Enter fee description"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="d-flex gap-2">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Save School Fee
+                    </button>
+
+
+                    <a
+                        href="{{ url_for('fee.school_fees') }}"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

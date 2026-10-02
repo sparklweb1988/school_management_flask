@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Home - George College Of Technology{% endblock %}
+{% block title %}
+    Home - George College Of Technology
+{% endblock %}
 
 {% block auth_content %}
 
 <div class="container">
 
-    <div class="row justify-content-center align-items-center"
-         style="min-height: 85vh;">
+    <div
+        class="row justify-content-center align-items-center"
+        style="min-height: 85vh;"
+    >
 
         <div class="col-lg-8 text-center">
 
@@ -19,14 +23,18 @@
                 Manage Your School With Ease
             </h1>
 
-            <p class="lead text-muted mb-4 mx-auto"
-               style="max-width: 700px;">
+            <p
+                class="lead text-muted mb-4 mx-auto"
+                style="max-width: 700px;"
+            >
                 Manage students, teachers, classrooms, subjects,
                 assignments and academic results from one simple system.
             </p>
 
-            <a href="{{ url_for('auth.login') }}"
-               class="btn btn-primary btn-lg px-5 py-3">
+            <a
+                href="{{ url_for('auth.login') }}"
+                class="btn btn-primary btn-lg px-5 py-3"
+            >
                 Login
             </a>
 

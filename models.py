@@ -464,3 +464,123 @@ class Result(db.Model):
             self.ca_score +
             self.exam_score
         )
+
+
+
+
+
+
+
+
+# =========================================================
+# SCHOOL FEE
+# =========================================================
+
+class SchoolFee(db.Model):
+
+    __tablename__ = "school_fees"
+
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
+
+    classroom_id = db.Column(
+        db.Integer,
+        db.ForeignKey("classrooms.id"),
+        nullable=False
+    )
+
+    session_id = db.Column(
+        db.Integer,
+        db.ForeignKey("school_sessions.id"),
+        nullable=False
+    )
+
+    term_id = db.Column(
+        db.Integer,
+        db.ForeignKey("terms.id"),
+        nullable=False
+    )
+
+    amount = db.Column(
+        db.Float,
+        nullable=False
+    )
+
+    description = db.Column(
+        db.String(255)
+    )
+
+    created_at = db.Column(
+        db.DateTime,
+        server_default=db.func.now()
+    )
+
+    classroom = db.relationship(
+        "Classroom"
+    )
+
+    session = db.relationship(
+        "SchoolSession"
+    )
+
+    term = db.relationship(
+        "Term"
+    )
+
+    payments = db.relationship(
+        "FeePayment",
+        back_populates="fee",
+        cascade="all, delete-orphan"
+    )
+
+
+# =========================================================
+# FEE PAYMENT
+# =========================================================
+
+class FeePayment(db.Model):
+
+    __tablename__ = "fee_payments"
+
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
+
+    student_id = db.Column(
+        db.Integer,
+        db.ForeignKey("students.id"),
+        nullable=False
+    )
+
+    fee_id = db.Column(
+        db.Integer,
+        db.ForeignKey("school_fees.id"),
+        nullable=False
+    )
+
+    amount_paid = db.Column(
+        db.Float,
+        nullable=False
+    )
+
+    payment_date = db.Column(
+        db.DateTime,
+        server_default=db.func.now()
+    )
+
+    reference = db.Column(
+        db.String(100),
+        unique=True
+    )
+
+    fee = db.relationship(
+        "SchoolFee",
+        back_populates="payments"
+    )
+
+    student = db.relationship(
+        "Student"
+    )

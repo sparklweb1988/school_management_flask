@@ -9,7 +9,8 @@ from models import (
     SchoolSession,
     Term,
     TeacherAssignment,
-    Result
+    Result,
+    FeePayment
 )
 
 
@@ -44,6 +45,8 @@ def index():
 
     total_results = Result.query.count()
 
+    total_fee_payments = FeePayment.query.count()
+
 
     return render_template(
         "dashboard/index.html",
@@ -64,5 +67,7 @@ def index():
 
         total_assignments=total_assignments,
 
-        total_results=total_results
+        total_results=total_results,
+
+        total_fee_payments=total_fee_payments
     )

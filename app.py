@@ -45,6 +45,9 @@ def create_app():
     from routes.result import result
     from routes.session import session
     from routes.term import term
+    from routes.fee import fee
+    from routes.payment import payment
+
 
     app.register_blueprint(auth)
     app.register_blueprint(dashboard)
@@ -56,6 +59,8 @@ def create_app():
     app.register_blueprint(result)
     app.register_blueprint(session)
     app.register_blueprint(term)
+    app.register_blueprint(fee)
+    app.register_blueprint(payment)
 
 
     # -------------------------

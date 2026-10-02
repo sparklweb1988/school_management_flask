@@ -309,44 +309,7 @@ Results
                                 </a>
 
 
-                                <!-- PRINT SINGLE RESULT -->
-
-                                <a
-                                    href="{{ url_for(
-                                        'result.print_result',
-                                        id=result.id
-                                    ) }}"
-                                    class="btn btn-sm btn-dark"
-                                >
-
-                                    Print
-
-                                </a>
-
-
-                                <!-- DELETE -->
-
-                                {% if current_user.role == "admin" %}
-
-                                <form
-                                    method="POST"
-                                    action="{{ url_for(
-                                        'result.delete_result',
-                                        id=result.id
-                                    ) }}"
-                                    class="d-inline"
-                                >
-
-                                    <button
-                                        type="submit"
-                                        class="btn btn-sm btn-danger"
-                                        onclick="return confirm('Delete this result?')"
-                                    >
-
-                                        Delete
-
-                                    </button>
-
+                               
                                 </form>
 
                                 {% endif %}

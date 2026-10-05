@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Fee Payment
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- PAGE HEADER -->
+
+    <div class="mb-4">
+
+        <h2 class="fw-bold">
+            Edit Fee Payment
+        </h2>
+
+        <p class="text-muted">
+            Update the student's fee payment.
+        </p>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <form method="POST">
+
+
+                <!-- STUDENT -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Student
+                    </label>
+
+
+                    <select
+                        name="student_id"
+                        class="form-select"
+                        required
+                    >
+
+                        {% for student in students %}
+
+                        <option
+                            value="{{ student.id }}"
+                            {% if student.id == payment.student_id %}
+                                selected
+                            {% endif %}
+                        >
+
+                            {{ student.name }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- SCHOOL FEE -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        School Fee
+                    </label>
+
+
+                    <select
+                        name="fee_id"
+                        class="form-select"
+                        required
+                    >
+
+                        {% for fee in fees %}
+
+                        <option
+                            value="{{ fee.id }}"
+                            {% if fee.id == payment.fee_id %}
+                                selected
+                            {% endif %}
+                        >
+
+                            {{ fee.classroom.name }}
+                            -
+                            {{ fee.session.year }}
+                            -
+                            {{ fee.term.name }}
+                            -
+                            ₦{{ "{:,.2f}".format(fee.amount) }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- AMOUNT -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Amount Paid
+                    </label>
+
+
+                    <input
+                        type="number"
+                        name="amount_paid"
+                        class="form-control"
+                        value="{{ payment.amount_paid }}"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- REFERENCE -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Payment Reference
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="reference"
+                        class="form-control"
+                        value="{{ payment.reference or '' }}"
+                        placeholder="Enter payment reference"
+                    >
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="d-flex gap-2">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Update Payment
+                    </button>
+
+
+                    <a
+                        href="{{ url_for('payment.fee_payments') }}"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}Teachers{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between mb-4">
+
+    <div>
+
+        <h2>Teachers</h2>
+
+        <p class="text-muted">
+            Manage teachers
+        </p>
+
+    </div>
+
+
+    {% if current_user.role == "admin" %}
+
+    <a
+        href="{{ url_for('teacher.create_teacher') }}"
+        class="btn btn-primary"
+    >
+        Add Teacher
+    </a>
+
+    {% endif %}
+
+</div>
+
+
+<div class="card shadow-sm">
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+
+                        {% if current_user.role == "admin" %}
+                        <th>Action</th>
+                        {% endif %}
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for teacher in teachers %}
+
+                    <tr>
+
+                        <td>
+                            {{ loop.index }}
+                        </td>
+
+
+                        <td>
+                            <strong>
+                                {{ teacher.name }}
+                            </strong>
+                        </td>
+
+
+                        <td>
+                            {{ teacher.user.username }}
+                        </td>
+
+
+                        <td>
+                            {{ teacher.phone or "-" }}
+                        </td>
+
+
+                        <td>
+
+                            {% if teacher.is_active %}
+
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+
+                            {% else %}
+
+                            <span class="badge bg-danger">
+                                Inactive
+                            </span>
+
+                            {% endif %}
+
+                        </td>
+
+
+                        {% if current_user.role == "admin" %}
+
+                        <td>
+
+                            <a
+                                href="{{ url_for(
+                                    'teacher.edit_teacher',
+                                    id=teacher.id
+                                ) }}"
+                                class="btn btn-sm btn-warning"
+                            >
+                                Edit
+                            </a>
+
+
+                            <form
+                                method="POST"
+                                action="{{ url_for(
+                                    'teacher.toggle_teacher_status',
+                                    id=teacher.id
+                                ) }}"
+                                class="d-inline"
+                            >
+
+                                {% if teacher.is_active %}
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-sm btn-danger"
+                                    onclick="return confirm('Deactivate this teacher?')"
+                                >
+                                    Deactivate
+                                </button>
+
+                                {% else %}
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-sm btn-success"
+                                    onclick="return confirm('Activate this teacher?')"
+                                >
+                                    Activate
+                                </button>
+
+                                {% endif %}
+
+                            </form>
+
+                        </td>
+
+                        {% endif %}
+
+                    </tr>
+
+
+                    {% else %}
+
+                    <tr>
+
+                        <td
+                            colspan="6"
+                            class="text-center text-muted py-4"
+                        >
+                            No teachers found.
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

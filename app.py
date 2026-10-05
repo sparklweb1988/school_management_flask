@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+import webview
 from config import Config
 from extensions import db, login_manager
 
@@ -16,6 +16,11 @@ def create_app():
     login_manager.init_app(app)
 
     login_manager.login_view = "auth.login"
+
+
+    with app.app_context():
+
+            db.create_all()
 
 
     # -------------------------
@@ -87,8 +92,10 @@ app = create_app()
 
 if __name__ == "__main__":
 
-    with app.app_context():
+    # webview.create_window(
+    #      'School Management System', app
+    # )
 
-        db.create_all()
-
+   
     app.run(debug=True)
+    # webview.start()

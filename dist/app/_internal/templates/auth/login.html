@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block auth_content %}
+
+<div class="container">
+
+    <div
+        class="row justify-content-center align-items-center"
+        style="min-height: 100vh;"
+    >
+
+        <div class="col-md-5">
+
+            <div class="card shadow">
+
+                <div class="card-body p-5">
+
+                    <h3 class="text-center fw-bold mb-2">
+                        School Result Management
+                    </h3>
+
+                    <p class="text-center text-muted mb-4">
+                        Login to your account
+                    </p>
+
+
+                    {% with messages = get_flashed_messages(
+                        with_categories=true
+                    ) %}
+
+                        {% for category, message in messages %}
+
+                            <div class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+
+                        {% endfor %}
+
+                    {% endwith %}
+
+
+                    <form method="POST">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Username
+                            </label>
+
+                            <input
+                                type="text"
+                                name="username"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                name="password"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100"
+                        >
+                            Login
+                        </button>
+
+                    </form>
+
+
+                    <!-- Back to Homepage -->
+                    <div class="text-center mt-3">
+
+                        <a
+                            href="{{ url_for('home') }}"
+                            class="text-decoration-none text-muted"
+                        >
+                            ← Back to Homepage
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit School Fee
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <!-- PAGE HEADER -->
+
+    <div class="mb-4">
+
+        <h2 class="fw-bold">
+            Edit School Fee
+        </h2>
+
+        <p class="text-muted">
+            Update the classroom, session, term, amount or description.
+        </p>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <form method="POST">
+
+
+                <!-- CLASSROOM -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Classroom
+                    </label>
+
+                    <select
+                        name="classroom_id"
+                        class="form-select"
+                        required
+                    >
+
+                        {% for classroom in classrooms %}
+
+                        <option
+                            value="{{ classroom.id }}"
+                            {% if classroom.id == fee.classroom_id %}
+                                selected
+                            {% endif %}
+                        >
+
+                            {{ classroom.name }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- SESSION -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        School Session
+                    </label>
+
+                    <select
+                        name="session_id"
+                        class="form-select"
+                        required
+                    >
+
+                        {% for session in sessions %}
+
+                        <option
+                            value="{{ session.id }}"
+                            {% if session.id == fee.session_id %}
+                                selected
+                            {% endif %}
+                        >
+
+                            {{ session.year }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- TERM -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Term
+                    </label>
+
+                    <select
+                        name="term_id"
+                        class="form-select"
+                        required
+                    >
+
+                        {% for term in terms %}
+
+                        <option
+                            value="{{ term.id }}"
+                            {% if term.id == fee.term_id %}
+                                selected
+                            {% endif %}
+                        >
+
+                            {{ term.name }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- AMOUNT -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Amount
+                    </label>
+
+                    <input
+                        type="number"
+                        name="amount"
+                        class="form-control"
+                        value="{{ fee.amount }}"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Description
+                    </label>
+
+                    <textarea
+                        name="description"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Enter fee description"
+                    >{{ fee.description or "" }}</textarea>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="d-flex gap-2">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Update School Fee
+                    </button>
+
+
+                    <a
+                        href="{{ url_for('fee.school_fees') }}"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

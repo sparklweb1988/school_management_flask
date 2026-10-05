@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}
+Teacher Assignments
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+
+        <h2 class="fw-bold">
+            Teacher Assignments
+        </h2>
+
+        <p class="text-muted">
+            Manage teachers, classes and subjects.
+        </p>
+
+    </div>
+
+
+    {% if current_user.role == "admin" %}
+
+    <a
+        href="{{ url_for('assignment.create_assignment') }}"
+        class="btn btn-primary"
+    >
+        Assign Teacher
+    </a>
+
+    {% endif %}
+
+</div>
+
+
+<div class="card shadow-sm border-0">
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Teacher</th>
+                        <th>Class</th>
+                        <th>Subject</th>
+
+                        {% if current_user.role == "admin" %}
+                        <th>Action</th>
+                        {% endif %}
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for item in assignments %}
+
+                    <tr>
+
+                        <td>
+                            {{ item.teacher.name }}
+                        </td>
+
+                        <td>
+                            {{ item.classroom.name }}
+                        </td>
+
+                        <td>
+                            {{ item.subject.name }}
+                        </td>
+
+
+                        {% if current_user.role == "admin" %}
+
+                        <td>
+
+                            <form
+                                method="POST"
+                                action="{{ url_for(
+                                    'assignment.delete_assignment',
+                                    id=item.id
+                                ) }}"
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-sm btn-danger"
+                                >
+                                    Delete
+                                </button>
+
+                            </form>
+
+                        </td>
+
+                        {% endif %}
+
+                    </tr>
+
+                    {% else %}
+
+                    <tr>
+
+                        <td
+                            colspan="4"
+                            class="text-center text-muted py-4"
+                        >
+                            No teacher assignments found.
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

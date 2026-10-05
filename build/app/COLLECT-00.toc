@@ -1,0 +1,676 @@
+([('VCRUNTIME140.dll',
+   'C:\\Program Files\\Python314\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Program Files\\Python314\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('_asyncio.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd', 'C:\\Program Files\\Python314\\DLLs\\_bz2.pyd', 'EXTENSION'),
+  ('_cffi_backend.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\_cffi_backend.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd', 'C:\\Program Files\\Python314\\DLLs\\_lzma.pyd', 'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_queue.pyd', 'C:\\Program Files\\Python314\\DLLs\\_queue.pyd', 'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_sqlite3.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\_sqlite3.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd', 'C:\\Program Files\\Python314\\DLLs\\_ssl.pyd', 'EXTENSION'),
+  ('_uuid.pyd', 'C:\\Program Files\\Python314\\DLLs\\_uuid.pyd', 'EXTENSION'),
+  ('_wmi.pyd', 'C:\\Program Files\\Python314\\DLLs\\_wmi.pyd', 'EXTENSION'),
+  ('_zstd.pyd', 'C:\\Program Files\\Python314\\DLLs\\_zstd.pyd', 'EXTENSION'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-fibers-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-fibers-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-fibers-l1-1-1.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-fibers-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-kernel32-legacy-l1-1-1.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-kernel32-legacy-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-2-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-sysinfo-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('app.exe',
+   'C:\\Users\\Akamkpa GH\\Desktop\\Flask_Projects\\FLASK\\build\\app\\app.exe',
+   'EXECUTABLE'),
+  ('base_library.zip',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\build\\app\\base_library.zip',
+   'DATA'),
+  ('click-8.5.0.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\click-8.5.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('click-8.5.0.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\click-8.5.0.dist-info\\METADATA',
+   'DATA'),
+  ('click-8.5.0.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\click-8.5.0.dist-info\\RECORD',
+   'DATA'),
+  ('click-8.5.0.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\click-8.5.0.dist-info\\WHEEL',
+   'DATA'),
+  ('click-8.5.0.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\click-8.5.0.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('clr_loader\\ffi\\dlls\\amd64\\ClrLoader.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\clr_loader\\ffi\\dlls\\amd64\\ClrLoader.dll',
+   'BINARY'),
+  ('clr_loader\\ffi\\dlls\\x86\\ClrLoader.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\clr_loader\\ffi\\dlls\\x86\\ClrLoader.dll',
+   'BINARY'),
+  ('flask-3.1.3.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\METADATA',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\RECORD',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\REQUESTED',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\REQUESTED',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\WHEEL',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\entry_points.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\entry_points.txt',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask-3.1.3.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('flask_sqlalchemy-3.1.1.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask_sqlalchemy-3.1.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('flask_sqlalchemy-3.1.1.dist-info\\LICENSE.rst',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask_sqlalchemy-3.1.1.dist-info\\LICENSE.rst',
+   'DATA'),
+  ('flask_sqlalchemy-3.1.1.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask_sqlalchemy-3.1.1.dist-info\\METADATA',
+   'DATA'),
+  ('flask_sqlalchemy-3.1.1.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask_sqlalchemy-3.1.1.dist-info\\RECORD',
+   'DATA'),
+  ('flask_sqlalchemy-3.1.1.dist-info\\REQUESTED',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask_sqlalchemy-3.1.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('flask_sqlalchemy-3.1.1.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\flask_sqlalchemy-3.1.1.dist-info\\WHEEL',
+   'DATA'),
+  ('greenlet\\_greenlet.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\greenlet\\_greenlet.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('itsdangerous-2.2.0.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\LICENSE.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\METADATA',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\RECORD',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\WHEEL',
+   'DATA'),
+  ('libcrypto-3.dll',
+   'C:\\Program Files\\Python314\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libffi-8.dll',
+   'C:\\Program Files\\Python314\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('libssl-3.dll',
+   'C:\\Program Files\\Python314\\DLLs\\libssl-3.dll',
+   'BINARY'),
+  ('markupsafe-3.0.3.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\METADATA',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\RECORD',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\WHEEL',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\top_level.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\top_level.txt',
+   'DATA'),
+  ('markupsafe\\_speedups.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\markupsafe\\_speedups.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('python314.dll', 'C:\\Program Files\\Python314\\python314.dll', 'BINARY'),
+  ('pythonnet\\runtime\\Python.Runtime.deps.json',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\pythonnet\\runtime\\Python.Runtime.deps.json',
+   'DATA'),
+  ('pythonnet\\runtime\\Python.Runtime.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\pythonnet\\runtime\\Python.Runtime.dll',
+   'BINARY'),
+  ('pythonnet\\runtime\\Python.Runtime.xml',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\pythonnet\\runtime\\Python.Runtime.xml',
+   'DATA'),
+  ('select.pyd', 'C:\\Program Files\\Python314\\DLLs\\select.pyd', 'EXTENSION'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'ipsum.txt',
+   'DATA'),
+  ('sqlalchemy\\cyextension\\collections.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\sqlalchemy\\cyextension\\collections.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\immutabledict.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\sqlalchemy\\cyextension\\immutabledict.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\processors.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\sqlalchemy\\cyextension\\processors.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\resultproxy.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\sqlalchemy\\cyextension\\resultproxy.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\util.cp314-win_amd64.pyd',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\sqlalchemy\\cyextension\\util.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlite3.dll', 'C:\\Program Files\\Python314\\DLLs\\sqlite3.dll', 'BINARY'),
+  ('static\\css\\style.css',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\static\\css\\style.css',
+   'DATA'),
+  ('static\\logo.jpg',
+   'C:\\Users\\Akamkpa GH\\Desktop\\Flask_Projects\\FLASK\\static\\logo.jpg',
+   'DATA'),
+  ('templates\\assignment\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\assignment\\create.html',
+   'DATA'),
+  ('templates\\assignment\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\assignment\\list.html',
+   'DATA'),
+  ('templates\\auth\\login.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\auth\\login.html',
+   'DATA'),
+  ('templates\\base.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\base.html',
+   'DATA'),
+  ('templates\\classroom\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\classroom\\create.html',
+   'DATA'),
+  ('templates\\classroom\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\classroom\\edit.html',
+   'DATA'),
+  ('templates\\classroom\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\classroom\\list.html',
+   'DATA'),
+  ('templates\\dashboard\\dashboard.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\dashboard\\dashboard.html',
+   'DATA'),
+  ('templates\\dashboard\\index.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\dashboard\\index.html',
+   'DATA'),
+  ('templates\\feepayment\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\feepayment\\create.html',
+   'DATA'),
+  ('templates\\feepayment\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\feepayment\\edit.html',
+   'DATA'),
+  ('templates\\feepayment\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\feepayment\\list.html',
+   'DATA'),
+  ('templates\\feepayment\\report.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\feepayment\\report.html',
+   'DATA'),
+  ('templates\\home.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\home.html',
+   'DATA'),
+  ('templates\\model.py',
+   'C:\\Users\\Akamkpa GH\\Desktop\\Flask_Projects\\FLASK\\templates\\model.py',
+   'DATA'),
+  ('templates\\result\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\result\\create.html',
+   'DATA'),
+  ('templates\\result\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\result\\edit.html',
+   'DATA'),
+  ('templates\\result\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\result\\list.html',
+   'DATA'),
+  ('templates\\result\\print.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\result\\print.html',
+   'DATA'),
+  ('templates\\result\\print_selected.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\result\\print_selected.html',
+   'DATA'),
+  ('templates\\result\\select_print.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\result\\select_print.html',
+   'DATA'),
+  ('templates\\schoolfee\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\schoolfee\\create.html',
+   'DATA'),
+  ('templates\\schoolfee\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\schoolfee\\edit.html',
+   'DATA'),
+  ('templates\\schoolfee\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\schoolfee\\list.html',
+   'DATA'),
+  ('templates\\session\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\session\\create.html',
+   'DATA'),
+  ('templates\\session\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\session\\list.html',
+   'DATA'),
+  ('templates\\student\\assignments.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\student\\assignments.html',
+   'DATA'),
+  ('templates\\student\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\student\\create.html',
+   'DATA'),
+  ('templates\\student\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\student\\edit.html',
+   'DATA'),
+  ('templates\\student\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\student\\list.html',
+   'DATA'),
+  ('templates\\student\\my_class.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\student\\my_class.html',
+   'DATA'),
+  ('templates\\subject\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\subject\\create.html',
+   'DATA'),
+  ('templates\\subject\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\subject\\edit.html',
+   'DATA'),
+  ('templates\\subject\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\subject\\list.html',
+   'DATA'),
+  ('templates\\teacher\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\teacher\\create.html',
+   'DATA'),
+  ('templates\\teacher\\edit.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\teacher\\edit.html',
+   'DATA'),
+  ('templates\\teacher\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\teacher\\list.html',
+   'DATA'),
+  ('templates\\term\\create.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\term\\create.html',
+   'DATA'),
+  ('templates\\term\\list.html',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\templates\\term\\list.html',
+   'DATA'),
+  ('ucrtbase.dll',
+   'C:\\Program Files\\Eclipse '
+   'Adoptium\\jre-8.0.502.7-hotspot\\bin\\ucrtbase.dll',
+   'BINARY'),
+  ('unicodedata.pyd',
+   'C:\\Program Files\\Python314\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('webview\\js\\api.js',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\js\\api.js',
+   'DATA'),
+  ('webview\\js\\customize.js',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\js\\customize.js',
+   'DATA'),
+  ('webview\\js\\finish.js',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\js\\finish.js',
+   'DATA'),
+  ('webview\\js\\lib\\dom_json.js',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\js\\lib\\dom_json.js',
+   'DATA'),
+  ('webview\\js\\lib\\polyfill.js',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\js\\lib\\polyfill.js',
+   'DATA'),
+  ('webview\\js\\state.js',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\js\\state.js',
+   'DATA'),
+  ('webview\\lib\\Microsoft.Web.WebView2.Core.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\Microsoft.Web.WebView2.Core.dll',
+   'BINARY'),
+  ('webview\\lib\\Microsoft.Web.WebView2.WinForms.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\Microsoft.Web.WebView2.WinForms.dll',
+   'BINARY'),
+  ('webview\\lib\\WebBrowserInterop.x64.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\WebBrowserInterop.x64.dll',
+   'BINARY'),
+  ('webview\\lib\\WebBrowserInterop.x86.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\WebBrowserInterop.x86.dll',
+   'BINARY'),
+  ('webview\\lib\\pywebview-android.jar',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\pywebview-android.jar',
+   'DATA'),
+  ('webview\\lib\\runtimes\\win-arm64\\native\\WebView2Loader.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\runtimes\\win-arm64\\native\\WebView2Loader.dll',
+   'BINARY'),
+  ('webview\\lib\\runtimes\\win-x64\\native\\WebView2Loader.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\runtimes\\win-x64\\native\\WebView2Loader.dll',
+   'BINARY'),
+  ('webview\\lib\\runtimes\\win-x86\\native\\WebView2Loader.dll',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\webview\\lib\\runtimes\\win-x86\\native\\WebView2Loader.dll',
+   'BINARY'),
+  ('werkzeug-3.1.8.dist-info\\INSTALLER',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\INSTALLER',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\METADATA',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\METADATA',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\RECORD',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\RECORD',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\WHEEL',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\WHEEL',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Akamkpa '
+   'GH\\Desktop\\Flask_Projects\\FLASK\\env\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\licenses\\LICENSE.txt',
+   'DATA')],)

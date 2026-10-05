@@ -1,0 +1,394 @@
+{% extends "base.html" %}
+
+{% block title %}
+Print Student Result
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body">
+
+            <h3 class="fw-bold mb-4">
+                Print Student Result
+            </h3>
+
+
+            <!-- =================================================
+                 STUDENT / SESSION / TERM SELECTION
+            ================================================== -->
+
+            <form method="GET">
+
+                <div class="row">
+
+
+                    <!-- STUDENT -->
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label fw-semibold">
+                            Student
+                        </label>
+
+                        <select
+                            name="student_id"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Student
+                            </option>
+
+                            {% for student in students %}
+
+                            <option
+                                value="{{ student.id }}"
+                                {% if selected_student_id == student.id %}
+                                    selected
+                                {% endif %}
+                            >
+
+                                {{ student.name }}
+
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SESSION -->
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label fw-semibold">
+                            Session
+                        </label>
+
+                        <select
+                            name="session_id"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Session
+                            </option>
+
+                            {% for session in sessions %}
+
+                            <option
+                                value="{{ session.id }}"
+                                {% if selected_session_id == session.id %}
+                                    selected
+                                {% endif %}
+                            >
+
+                                {{ session.year }}
+
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TERM -->
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label fw-semibold">
+                            Term
+                        </label>
+
+                        <select
+                            name="term_id"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Term
+                            </option>
+
+                            {% for term in terms %}
+
+                            <option
+                                value="{{ term.id }}"
+                                {% if selected_term_id == term.id %}
+                                    selected
+                                {% endif %}
+                            >
+
+                                {{ term.name }}
+
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+
+                    Load Subjects
+
+                </button>
+
+            </form>
+
+
+            {% if results %}
+
+            <hr class="my-4">
+
+
+            <!-- =================================================
+                 SUBJECT SELECTION
+            ================================================== -->
+
+            <form
+                method="POST"
+                action="{{ url_for(
+                    'result.print_selected_student_result'
+                ) }}"
+            >
+
+
+                <input
+                    type="hidden"
+                    name="student_id"
+                    value="{{ selected_student_id }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="session_id"
+                    value="{{ selected_session_id }}"
+                >
+
+
+                <input
+                    type="hidden"
+                    name="term_id"
+                    value="{{ selected_term_id }}"
+                >
+
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+
+                    <div>
+
+                        <h5 class="fw-bold mb-1">
+                            Select Subjects
+                        </h5>
+
+                        <small class="text-muted">
+                            Select the subjects you want to include in the printed result.
+                        </small>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                        onclick="toggleSubjects()"
+                    >
+
+                        Select All
+
+                    </button>
+
+                </div>
+
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered align-middle">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th
+                                    style="width: 50px;"
+                                    class="text-center"
+                                >
+
+                                    Select
+
+                                </th>
+
+                                <th>
+                                    Subject
+                                </th>
+
+                                <th class="text-center">
+                                    CA
+                                </th>
+
+                                <th class="text-center">
+                                    Exam
+                                </th>
+
+                                <th class="text-center">
+                                    Total
+                                </th>
+
+                                <th class="text-center">
+                                    Grade
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            {% for result in results %}
+
+                            <tr>
+
+                                <td class="text-center">
+
+                                    <input
+                                        type="checkbox"
+                                        name="subject_ids"
+                                        value="{{ result.subject_id }}"
+                                        class="form-check-input subject-checkbox"
+                                    >
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        {{ result.subject.name }}
+                                    </strong>
+
+                                </td>
+
+
+                                <td class="text-center">
+                                    {{ result.ca_score }}
+                                </td>
+
+
+                                <td class="text-center">
+                                    {{ result.exam_score }}
+                                </td>
+
+
+                                <td class="text-center fw-bold">
+                                    {{ result.total_score }}
+                                </td>
+
+
+                                <td class="text-center fw-bold">
+
+                                    {% if result.total_score >= 70 %}
+                                        A
+                                    {% elif result.total_score >= 60 %}
+                                        B
+                                    {% elif result.total_score >= 50 %}
+                                        C
+                                    {% elif result.total_score >= 45 %}
+                                        D
+                                    {% elif result.total_score >= 40 %}
+                                        E
+                                    {% else %}
+                                        F
+                                    {% endif %}
+
+                                </td>
+
+                            </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="d-flex justify-content-end mt-3">
+
+                    <button
+                        type="submit"
+                        class="btn btn-dark"
+                    >
+
+                        Print Selected Subjects
+
+                    </button>
+
+                </div>
+
+            </form>
+
+            {% elif selected_student_id %}
+
+            <div class="alert alert-warning mt-4">
+
+                No results were found for this student,
+                session and term.
+
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function toggleSubjects() {
+
+    const checkboxes =
+        document.querySelectorAll(".subject-checkbox");
+
+    const allChecked =
+        Array.from(checkboxes).every(
+            checkbox => checkbox.checked
+        );
+
+
+    checkboxes.forEach(function (checkbox) {
+
+        checkbox.checked = !allChecked;
+
+    });
+
+}
+
+</script>
+
+{% endblock %}

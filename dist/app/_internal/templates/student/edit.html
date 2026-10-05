@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Student{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-sm">
+
+    <div class="card-body">
+
+        <h3 class="mb-4">
+            Edit Student
+        </h3>
+
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    value="{{ student.name }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Parent Name
+                </label>
+
+                <input
+                    type="text"
+                    name="parent_name"
+                    class="form-control"
+                    value="{{ student.parent_name or '' }}"
+                >
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    name="age"
+                    class="form-control"
+                    value="{{ student.age or '' }}"
+                >
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Phone
+                </label>
+
+                <input
+                    type="text"
+                    name="phone"
+                    class="form-control"
+                    value="{{ student.phone or '' }}"
+                >
+
+            </div>
+
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Class
+                </label>
+
+                <select
+                    name="classroom_id"
+                    class="form-select"
+                >
+
+                    <option value="">
+                        No Class
+                    </option>
+
+                    {% for classroom in classrooms %}
+
+                    <option
+                        value="{{ classroom.id }}"
+                        {% if student.classroom_id == classroom.id %}
+                        selected
+                        {% endif %}
+                    >
+
+                        {{ classroom.name }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <button class="btn btn-primary">
+                Update Student
+            </button>
+
+            <a
+                href="{{ url_for('student.list_students') }}"
+                class="btn btn-secondary"
+            >
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

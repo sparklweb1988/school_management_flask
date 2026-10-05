@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Result
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-7">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body p-4">
+
+                <div class="mb-4">
+
+                    <h3 class="fw-bold mb-1">
+                        Edit Result
+                    </h3>
+
+                    <p class="text-muted mb-0">
+                        Update student's academic result.
+                    </p>
+
+                </div>
+
+
+                <!-- STUDENT INFORMATION -->
+
+                <div class="alert alert-light border">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <strong>
+                                Student:
+                            </strong>
+
+                            {{ result.student.name }}
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <strong>
+                                Subject:
+                            </strong>
+
+                            {{ result.subject.name }}
+
+                        </div>
+
+
+                        <div class="col-md-6 mt-2">
+
+                            <strong>
+                                Class:
+                            </strong>
+
+                            {{ result.classroom.name }}
+
+                        </div>
+
+
+                        <div class="col-md-6 mt-2">
+
+                            <strong>
+                                Session:
+                            </strong>
+
+                            {{ result.session.year }}
+
+                        </div>
+
+
+                        <div class="col-md-6 mt-2">
+
+                            <strong>
+                                Term:
+                            </strong>
+
+                            {{ result.term.name }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EDIT FORM -->
+
+                <form method="POST">
+
+
+                    <!-- CA SCORE -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+                            CA Score
+                        </label>
+
+                        <input
+                            type="number"
+                            name="ca_score"
+                            class="form-control"
+                            min="0"
+                            max="40"
+                            step="0.01"
+                            value="{{ result.ca_score }}"
+                            required
+                        >
+
+                        <small class="text-muted">
+                            Maximum CA score is 40.
+                        </small>
+
+                    </div>
+
+
+                    <!-- EXAM SCORE -->
+
+                    <div class="mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Exam Score
+                        </label>
+
+                        <input
+                            type="number"
+                            name="exam_score"
+                            class="form-control"
+                            min="0"
+                            max="60"
+                            step="0.01"
+                            value="{{ result.exam_score }}"
+                            required
+                        >
+
+                        <small class="text-muted">
+                            Maximum exam score is 60.
+                        </small>
+
+                    </div>
+
+
+                    <!-- CURRENT TOTAL -->
+
+                    <div class="alert alert-primary">
+
+                        <strong>
+                            Current Total:
+                        </strong>
+
+                        {{ result.total_score }}
+
+                        / 100
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Update Result
+                    </button>
+
+
+                    <a
+                        href="{{ url_for('result.list_results') }}"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

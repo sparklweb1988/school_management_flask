@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}
+Student Assignments
+{% endblock %}
+
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+
+        <h2 class="fw-bold mb-1">
+            Student Assignments
+        </h2>
+
+        <p class="text-muted mb-0">
+            Assign students to their classrooms.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ASSIGN STUDENT -->
+
+<div class="card shadow-sm border-0 mb-4">
+
+    <div class="card-body p-4">
+
+        <h4 class="fw-bold mb-4">
+            Assign Student to Class
+        </h4>
+
+
+        <form method="POST">
+
+            <div class="row">
+
+
+                <!-- STUDENT -->
+
+                <div class="col-md-5 mb-3">
+
+                    <label class="form-label">
+                        Student
+                    </label>
+
+                    <select
+                        name="student_id"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select Student
+                        </option>
+
+                        {% for student in students %}
+
+                        <option value="{{ student.id }}">
+
+                            {{ student.name }}
+
+                            {% if student.classroom %}
+
+                                - {{ student.classroom.name }}
+
+                            {% else %}
+
+                                - No Class
+
+                            {% endif %}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- CLASSROOM -->
+
+                <div class="col-md-5 mb-3">
+
+                    <label class="form-label">
+                        Classroom
+                    </label>
+
+                    <select
+                        name="classroom_id"
+                        class="form-select"
+                        required
+                    >
+
+                        <option value="">
+                            Select Classroom
+                        </option>
+
+                        {% for classroom in classrooms %}
+
+                        <option value="{{ classroom.id }}">
+                            {{ classroom.name }}
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <div class="col-md-2 mb-3 d-flex align-items-end">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary w-100"
+                    >
+                        Assign
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- CURRENT ASSIGNMENTS -->
+
+<div class="card shadow-sm border-0">
+
+    <div class="card-body">
+
+        <h4 class="fw-bold mb-4">
+            Current Student Classes
+        </h4>
+
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+
+                        <th>
+                            Student
+                        </th>
+
+                        <th>
+                            Username
+                        </th>
+
+                        <th>
+                            Class
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for student in students %}
+
+                    <tr>
+
+                        <td>
+                            {{ loop.index }}
+                        </td>
+
+                        <td>
+                            <strong>
+                                {{ student.name }}
+                            </strong>
+                        </td>
+
+                        <td>
+                            {{ student.user.username }}
+                        </td>
+
+                        <td>
+
+                            {% if student.classroom %}
+
+                            <span class="badge bg-success">
+                                {{ student.classroom.name }}
+                            </span>
+
+                            {% else %}
+
+                            <span class="badge bg-secondary">
+                                No Class
+                            </span>
+
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+
+                    {% else %}
+
+                    <tr>
+
+                        <td
+                            colspan="4"
+                            class="text-center text-muted py-4"
+                        >
+                            No students found.
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

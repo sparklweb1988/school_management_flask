@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}
+Assign Teacher
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-7">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body p-4">
+
+                <h3 class="fw-bold mb-4">
+                    Assign Teacher
+                </h3>
+
+
+                <form method="POST">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Teacher
+                        </label>
+
+                        <select
+                            name="teacher_id"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Teacher
+                            </option>
+
+                            {% for teacher in teachers %}
+
+                            <option value="{{ teacher.id }}">
+                                {{ teacher.name }}
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Classroom
+                        </label>
+
+                        <select
+                            name="classroom_id"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Classroom
+                            </option>
+
+                            {% for classroom in classrooms %}
+
+                            <option value="{{ classroom.id }}">
+                                {{ classroom.name }}
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Subject
+                        </label>
+
+                        <select
+                            name="subject_id"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Select Subject
+                            </option>
+
+                            {% for subject in subjects %}
+
+                            <option value="{{ subject.id }}">
+                                {{ subject.name }}
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Assign Teacher
+                    </button>
+
+
+                    <a
+                        href="{{ url_for('assignment.list_assignments') }}"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
